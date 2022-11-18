@@ -1,0 +1,9 @@
+{
+	"scripts": {
+		"show_balance": "node ./scripts/show_balance.js"
+	},
+	"dependencies": {
+		"node-fetch": "^3.3.0"
+	},
+	"type": "module"
+}

@@ -2,7 +2,7 @@
 
 If you want to change token parameters, you should change args in sources/token.move initialize function (name, symbol, decimals)
 
-To use modules and scripts you should have aptos cli, to use js scripts you should have node
+To use modules and scripts you should have aptos cli, to use js scripts you should have node (run npm install first)
 
 Compile modules and scripts
 ```sh
@@ -17,7 +17,7 @@ Publish token (with default account)
 ```sh
 aptos move publish
 ```
-If you want to deploy from another private key, set either --private-key or --profile
+If you want to deploy not from default account, set either --private-key or --profile
 
 
 Initialize published token
@@ -36,7 +36,7 @@ aptos move run-script --compiled-script-path build/Token/bytecode_scripts/main_1
 
 Mint tokens (must be called either from owner account or with owner private key)
 ```sh
-aptos move run-script --compiled-script-path build/Token/bytecode_scripts/main_0.mv --profile default --args address:<to address> u64:<amount>
+aptos move run-script --compiled-script-path build/Token/bytecode_scripts/main_0.mv --profile <profile name> --args address:<to address> u64:<amount>
 ```
 For example
 ```sh
